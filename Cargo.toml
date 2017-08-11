@@ -1,0 +1,10 @@
+[package]
+name = "osvr-sys"
+version = "0.1.0"
+authors = ["Tom Morton <tomm@riseup.net>"]
+
+[dependencies]
+
+[build-dependencies]
+bindgen = "0.29.0"
+
