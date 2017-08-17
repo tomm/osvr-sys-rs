@@ -3,4 +3,8 @@
 #![allow(non_snake_case)]
 #[allow(dead_code)]
 
+extern "C" {
+    pub fn SDL_GL_GetProcAddress(name: *const ::std::os::raw::c_char) -> *const ::std::os::raw::c_void;
+}
+
 include!(concat!(env!("OUT_DIR"), "/bindings.rs"));

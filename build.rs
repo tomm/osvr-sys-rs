@@ -6,10 +6,10 @@ use std::path::PathBuf;
 fn main() {
     // Tell cargo to tell rustc to link the system bzip2
     // shared library.
-    println!("cargo:rustc-link-lib=osvrRenderManager");
-    println!("cargo:rustc-link-lib=osvrCommon");
     println!("cargo:rustc-link-lib=osvrClient");
+    println!("cargo:rustc-link-lib=osvrRenderManager");
     println!("cargo:rustc-link-lib=osvrClientKit");
+    println!("cargo:rustc-link-lib=osvrCommon");
 
     // The bindgen::Builder is the main entry point
     // to bindgen, and lets you build up options for
@@ -53,6 +53,7 @@ fn main() {
         .whitelisted_function("osvrClientShutdown")
         .whitelisted_function("osvrDestroyRenderManager")
         .whitelisted_function("OSVR_Projection_to_OpenGL")
+        .whitelisted_function("OSVR_PoseState_to_OpenGL")
         //.opaque_type("std::basic_string")
         //.hide_type("std::.*")
         // Finish the builder and generate the bindings.
