@@ -1,13 +1,13 @@
 [package]
 name = "osvr-sys"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Tom Morton <tomm@riseup.net>"]
 license = "MIT"
 description = "OSVR-Core and OSVR-RenderManager low-level system bindings"
 repository = "https://github.com/tomm/osvr-sys-rs.git"
 
 [dependencies]
+sdl2 = "0.27"
 
 [build-dependencies]
 bindgen = "0.29.0"
-
